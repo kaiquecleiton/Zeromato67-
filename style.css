@@ -1,0 +1,142 @@
+body{
+margin:0;
+font-family:'Oswald', sans-serif;
+background:#fff5e2;
+color:#1a1a1a;
+}
+
+/* HERO */
+.hero{
+position:relative;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+.content{
+position:relative;
+z-index:2;
+animation:fade 1s;
+color:#fff;
+}
+
+/* ANIMAÇÃO */
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* TÍTULO */
+h1{
+font-size:42px;
+color:#22c55e;
+letter-spacing:1px;
+}
+
+/* SUBTEXTO */
+.sub{
+color:#ddd;
+}
+
+/* LOCAL */
+.local{
+margin-top:10px;
+font-size:14px;
+color:#4ade80;
+}
+
+/* BOTÃO */
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 26px;
+background:#16a34a;
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#15803d;
+transform:scale(1.05);
+}
+
+/* SEÇÕES */
+.section{
+padding:50px 20px;
+text-align:center;
+opacity:0;
+transform:translateY(30px);
+transition:0.5s;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* TÍTULO DAS SEÇÕES */
+.section h2{
+color:#16a34a;
+margin-bottom:10px;
+}
+
+/* CARDS */
+.card{
+background:#ffffff;
+padding:25px;
+border-radius:12px;
+margin-top:20px;
+color:#1a1a1a;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* GRID IMAGENS */
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:20px;
+}
+
+.grid img{
+width:100%;
+border-radius:10px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.whatsapp img{
+width:30px;
+}
