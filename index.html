@@ -53,15 +53,17 @@
       margin-bottom:12px;
     }
 
+    /* BOTÃO */
     .botao {
-      display:inline-block;
+      display:block;
+      width:250px;
+      margin:0 auto 15px;
       background:linear-gradient(135deg,#FF9800,#FF6F00);
       color:#fff;
-      padding:12px 20px;
+      padding:12px 0;
       border-radius:8px;
       text-decoration:none;
       font-weight:600;
-      margin-bottom:15px;
     }
 
     /* SLIDER */
@@ -120,26 +122,36 @@
       border-radius:8px;
     }
 
-    /* WHATSAPP */
+    /* WHATSAPP PREMIUM */
     .whatsapp {
       position:fixed;
       bottom:18px;
       right:18px;
-      background:#25D366;
-      width:64px;
-      height:64px;
+      width:65px;
+      height:65px;
       border-radius:50%;
+      background:#25D366;
       display:flex;
       align-items:center;
       justify-content:center;
-      box-shadow:0 8px 20px rgba(0,0,0,0.25);
-      z-index:999;
+      box-shadow:0 10px 25px rgba(0,0,0,0.3);
+      transition:0.3s;
+      animation:pulse 2s infinite;
+    }
+
+    .whatsapp:hover {
+      transform:scale(1.1);
     }
 
     .whatsapp img {
-      width:38px;
-      height:38px;
-      display:block;
+      width:34px;
+      height:34px;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow:0 0 0 0 rgba(37,211,102,0.5); }
+      70% { box-shadow:0 0 0 12px rgba(37,211,102,0); }
+      100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
     }
 
   </style>
@@ -153,13 +165,12 @@
     <h1>Seu terreno limpo com rapidez e serviço profissional</h1>
     <p>Atendimento em Ribas do Rio Pardo e região</p>
 
-    
     <a href="https://wa.me/5567981194737?text=Quero%20orçamento" class="botao">
       Solicitar orçamento
     </a>
 
     <div class="slider-novo">
-      <img id="slideImg" src="antes.jpg" alt="Antes e depois">
+      <img id="slideImg" src="antes.jpg">
       <div class="slider-label" id="slideLabel">Antes</div>
     </div>
   </div>
@@ -169,7 +180,7 @@
 <section>
   <h2>Serviços</h2>
   <div class="card">
-    Roçagem • Limpeza de terrenos • Manutenção
+    Roçagem de terrenos • lotes • Controle de mato alto • 
   </div>
 </section>
 
@@ -177,8 +188,8 @@
 <section class="resultados-section">
   <h2>Resultados</h2>
   <div class="resultados">
-    <img src="antes.jpg" alt="Antes">
-    <img src="depois.jpg" alt="Depois">
+    <img src="antes.jpg">
+    <img src="depois.jpg">
   </div>
 </section>
 
