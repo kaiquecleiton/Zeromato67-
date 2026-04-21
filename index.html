@@ -23,15 +23,14 @@
       color:var(--text);
     }
 
-    /* SEÇÕES MAIS JUSTAS */
     section {
-      padding:40px 20px;
+      padding:35px 20px; /* MAIS JUSTO */
       text-align:center;
     }
 
-    /* HERO AJUSTADO */
+    /* HERO */
     .hero {
-      padding:60px 20px 40px; /* topo menor */
+      padding:50px 20px 30px;
       background: linear-gradient(180deg, #F4F6F3 0%, #FFFFFF 100%);
     }
 
@@ -40,21 +39,19 @@
       margin:auto;
     }
 
-    /* TÍTULO */
     .hero h1 {
       font-size:28px;
       font-weight:600;
       line-height:1.3;
-      margin-bottom:8px;
+      margin-bottom:6px;
     }
 
     .hero p {
       font-size:14px;
       color:#555;
-      margin-bottom:15px;
+      margin-bottom:12px;
     }
 
-    /* BOTÃO */
     .botao {
       display:inline-block;
       background:linear-gradient(135deg,#FF9800,#FF6F00);
@@ -63,13 +60,13 @@
       border-radius:8px;
       text-decoration:none;
       font-weight:600;
-      margin-bottom:20px;
+      margin-bottom:15px;
     }
 
     /* SLIDER */
     .slider-novo {
-      width:260px;
-      margin:20px auto 0;
+      width:250px;
+      margin:15px auto 0;
       position:relative;
     }
 
@@ -80,11 +77,11 @@
 
     .slider-label {
       position:absolute;
-      top:8px;
-      left:8px;
+      top:6px;
+      left:6px;
       background:#000;
       color:#fff;
-      padding:3px 7px;
+      padding:3px 6px;
       border-radius:4px;
       font-size:11px;
     }
@@ -93,24 +90,28 @@
     h2 {
       font-size:20px;
       color:var(--primary);
-      margin-bottom:10px;
+      margin-bottom:8px;
     }
 
-    /* CARDS */
+    /* SERVIÇOS */
     .card {
       background:#fff;
       padding:15px;
       border-radius:8px;
-      max-width:380px;
+      max-width:360px;
       margin:0 auto;
     }
 
-    /* RESULTADOS */
+    /* RESULTADOS (SUBIDO) */
+    .resultados-section {
+      padding-top:15px; /* REMOVE ESPAÇO DE CIMA */
+    }
+
     .resultados {
       display:flex;
       gap:8px;
       justify-content:center;
-      margin-top:10px;
+      margin-top:8px;
     }
 
     .resultados img {
@@ -118,21 +119,25 @@
       border-radius:8px;
     }
 
-    /* WHATS */
+    /* WHATSAPP CORRIGIDO */
     .whatsapp {
       position:fixed;
       bottom:20px;
       right:20px;
       background:#25D366;
-      width:58px;
-      height:58px;
+      width:62px;
+      height:62px;
       border-radius:50%;
       display:flex;
       align-items:center;
       justify-content:center;
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
     }
 
-    .whatsapp img { width:30px; }
+    .whatsapp img {
+      width:36px; /* MAIOR E CENTRAL */
+      height:36px;
+    }
 
   </style>
 </head>
@@ -164,8 +169,8 @@
   </div>
 </section>
 
-<!-- RESULTADOS -->
-<section>
+<!-- RESULTADOS (AJUSTADO) -->
+<section class="resultados-section">
   <h2>Resultados</h2>
   <div class="resultados">
     <img src="antes.jpg">
