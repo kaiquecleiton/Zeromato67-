@@ -8,256 +8,244 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
- /* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * { margin:0; padding:0; box-sizing:border-box; }
 
-/* CORES */
-:root {
-  --primary: #1B5E20;
-  --background: #F4F6F3;
-  --white: #FFFFFF;
-  --text: #1F1F1F;
-  --cta: #FF9800;
-}
+    :root {
+      --primary:#1B5E20;
+      --bg:#F4F6F3;
+      --text:#1F1F1F;
+      --cta:#FF9800;
+    }
 
-/* BASE */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--background);
-  color: var(--text);
-  line-height: 1.6;
-}
+    body {
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
 
-/* SEÇÕES */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
+    section {
+      padding:70px 20px;
+      text-align:center;
+    }
 
-/* TITULOS */
-h1 {
-  font-size: 34px;
-  font-weight: 600;
-}
+    h1 { font-size:34px; }
+    h2 { font-size:26px; color:var(--primary); margin-bottom:25px; }
 
-h2 {
-  font-size: 26px;
-  color: var(--primary);
-  margin-bottom: 25px;
-}
+    /* HERO */
+    .hero {
+      position:relative;
+      background:url('fundo.jpg') center/cover no-repeat;
+      padding:110px 20px;
+    }
 
-/* HERO */
-.hero {
-  position: relative;
-  background: url('fundo.jpg') center/cover no-repeat;
-  padding: 100px 20px;
-}
+    .overlay {
+      position:absolute;
+      inset:0;
+      background:rgba(255,255,255,0.85);
+      backdrop-filter:blur(4px);
+    }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(3px);
-}
+    .hero-content {
+      position:relative;
+      z-index:2;
+      max-width:600px;
+      margin:auto;
+    }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-  margin: auto;
-}
+    .hero p { color:#555; margin:10px 0; }
 
-.hero p {
-  color: #555;
-  margin: 10px 0 15px;
-}
+    .botao {
+      display:inline-block;
+      margin-top:15px;
+      background:linear-gradient(135deg,#FF9800,#FF6F00);
+      color:#fff;
+      padding:16px 26px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 10px 25px rgba(255,152,0,0.3);
+      transition:.3s;
+    }
 
-.local {
-  display: block;
-  margin-bottom: 25px;
-  color: var(--primary);
-  font-weight: 500;
-}
+    .botao:hover {
+      transform:translateY(-3px);
+      box-shadow:0 15px 30px rgba(255,152,0,0.4);
+    }
 
-/* BOTÃO PREMIUM */
-.botao {
-  display: inline-block;
-  background: linear-gradient(135deg, #FF9800, #FF6F00);
-  color: #fff;
-  padding: 16px 24px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 8px 20px rgba(255,152,0,0.3);
-  transition: 0.3s;
-}
+    /* SLIDER */
+    .slider {
+      position:relative;
+      width:320px;
+      margin:40px auto;
+      overflow:hidden;
+      border-radius:14px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
 
-.botao:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(255,152,0,0.4);
-}
+    .slider img { width:100%; display:block; }
 
-/* SLIDER PREMIUM */
-.slider {
-  position: relative;
-  width: 320px;
-  margin: 40px auto 0;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
+    .before {
+      position:absolute;
+      top:0;
+      left:0;
+      width:50%;
+      overflow:hidden;
+    }
 
-.slider img {
-  width: 100%;
-  display: block;
-}
+    .handle {
+      position:absolute;
+      top:0;
+      left:50%;
+      width:4px;
+      height:100%;
+      background:#fff;
+      cursor:ew-resize;
+    }
 
-.before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  overflow: hidden;
-}
+    /* CARDS */
+    .card {
+      background:#fff;
+      padding:25px;
+      border-radius:14px;
+      margin:20px auto;
+      max-width:500px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      transition:.3s;
+    }
 
-.handle {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 4px;
-  height: 100%;
-  background: #fff;
-}
+    .card:hover {
+      transform:translateY(-5px);
+    }
 
-/* CARDS PREMIUM */
-.card {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 25px;
-  margin: 20px auto;
-  max-width: 500px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
+    /* RESULTADOS */
+    .resultados {
+      display:flex;
+      gap:15px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
 
-/* RESULTADOS */
-.resultados {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
+    .resultados img {
+      width:45%;
+      border-radius:12px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    }
 
-.resultados img {
-  width: 45%;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
+    /* PROVA SOCIAL */
+    .prova {
+      font-style:italic;
+      max-width:500px;
+      margin:auto;
+      color:#555;
+    }
 
-/* WHATSAPP PREMIUM */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
+    /* WHATS */
+    .whatsapp {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      width:65px;
+      height:65px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
 
-.whatsapp:hover {
-  transform: scale(1.1);
-}
+    .whatsapp img { width:35px; }
 
-.whatsapp img {
-  width: 35px;
-}
+    /* ANIMAÇÃO */
+    .fade {
+      opacity:0;
+      transform:translateY(20px);
+      transition:0.6s;
+    }
+
+    .fade.show {
+      opacity:1;
+      transform:translateY(0);
+    }
   </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<section class="hero fade">
   <div class="overlay"></div>
-
   <div class="hero-content">
     <h1>Cansado de mato alto no seu terreno?</h1>
-    <p>Limpeza rápida e profissional com roçadeira</p>
-    <span class="local">📍 Ribas do Rio Pardo e região</span>
+    <p>Limpeza rápida, profissional e sem dor de cabeça</p>
 
-    <a href="https://wa.me/5567981194737" class="botao" target="_blank">
+    <a href="https://wa.me/5567981194737?text=Olá%20quero%20orçamento" class="botao" target="_blank">
       SOLICITAR ORÇAMENTO
     </a>
 
-    <!-- SLIDER -->
-    
-      
-<!-- SERVIÇOS -->
-<section>
-  <h2>Serviços</h2>
-  <div class="card">
-    <p>Roçagem de terrenos</p>
-    <p>Limpeza de lotes</p>
-    <p>Chácaras</p>
-    <p>Manutenções</p>
+    <div class="slider" id="slider">
+      <img src="depois.jpg">
+      <div class="before" id="before">
+        <img src="antes.jpg">
+      </div>
+      <div class="handle" id="handle"></div>
+    </div>
   </div>
 </section>
 
-<!-- RESULTADOS -->
-<section>
-  <h2>Resultados</h2>
+<section class="fade">
+  <h2>Serviços</h2>
+  <div class="card">Roçagem • Limpeza • Chácaras • Manutenção</div>
+</section>
+
+<section class="fade">
+  <h2>Resultados reais</h2>
   <div class="resultados">
     <img src="antes.jpg">
     <img src="depois.jpg">
   </div>
 </section>
 
-<!-- POR QUE ESCOLHER -->
-<section>
-  <h2>Por que escolher?</h2>
-  <div class="card">
-    <p>Atendimento rápido</p>
-    <p>Equipamento profissional</p>
-    <p>Preço justo</p>
-    <p>Serviço confiável</p>
-  </div>
+<section class="fade">
+  <h2>Clientes satisfeitos</h2>
+  <p class="prova">“Serviço rápido e muito bem feito. Recomendo!”</p>
 </section>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/5567981194737" class="whatsapp" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+<a href="https://wa.me/5567981194737?text=Olá%20quero%20orçamento" class="whatsapp" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
 
 <script>
-  const slider = document.getElementById('slider');
-  const before = document.getElementById('before');
-  const handle = document.getElementById('handle');
+/* SLIDER */
+const slider = document.getElementById('slider');
+const before = document.getElementById('before');
+const handle = document.getElementById('handle');
 
-  let isDragging = false;
+let dragging = false;
 
-  handle.addEventListener('mousedown', () => isDragging = true);
-  window.addEventListener('mouseup', () => isDragging = false);
+handle.addEventListener('mousedown',()=>dragging=true);
+window.addEventListener('mouseup',()=>dragging=false);
 
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
+window.addEventListener('mousemove',(e)=>{
+  if(!dragging) return;
+  const rect=slider.getBoundingClientRect();
+  let x=e.clientX-rect.left;
+  if(x<0)x=0;
+  if(x>rect.width)x=rect.width;
+  before.style.width=x+'px';
+  handle.style.left=x+'px';
+});
 
-    const rect = slider.getBoundingClientRect();
-    let x = e.clientX - rect.left;
-
-    if (x < 0) x = 0;
-    if (x > rect.width) x = rect.width;
-
-    before.style.width = x + 'px';
-    handle.style.left = x + 'px';
+/* ANIMAÇÃO */
+const fades=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+  fades.forEach(el=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-50){
+      el.classList.add('show');
+    }
   });
+});
 </script>
 
 </body>
