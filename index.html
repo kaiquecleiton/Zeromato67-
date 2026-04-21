@@ -9,7 +9,6 @@
   <meta name="description" content="Roçagem de terrenos em Ribas do Rio Pardo. Limpeza de lotes, controle de mato alto e serviço rápido com preço justo. Solicite orçamento pelo WhatsApp.">
   <meta name="author" content="Zero Mato">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Roçagem de Terrenos em Ribas do Rio Pardo">
   <meta property="og:description" content="Limpeza rápida de terrenos e lotes. Fale agora no WhatsApp.">
   <meta property="og:type" content="website">
@@ -110,50 +109,54 @@
       margin:0 auto;
     }
 
+    /* SLIDER RESULTADOS */
     .resultados {
-  overflow: hidden;
-}
-
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 20px;
-}
-
-.par {
-  display: flex;
-  min-width: 100%;
-  scroll-snap-align: start;
-  gap: 10px;
-}
-
-.par img {
-  width: 50%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
+      overflow: hidden;
+      max-width: 100%;
     }
 
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .par {
+      display: flex;
+      min-width: 100%;
+      scroll-snap-align: start;
+      gap: 10px;
+    }
+
+    .par img {
+      width: 50%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* WHATSAPP FIXO */
     .whatsapp {
-      position:fixed;
-      bottom:18px;
-      right:18px;
-      width:65px;
-      height:65px;
-      border-radius:50%;
-      background:#25D366;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow:0 10px 25px rgba(0,0,0,0.3);
-      animation:pulse 2s infinite;
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      animation: pulse 2s infinite;
+      z-index: 99999;
     }
 
     .whatsapp img {
-      width:34px;
-      height:34px;
+      width: 34px;
+      height: 34px;
     }
 
     @keyframes pulse {
@@ -161,6 +164,7 @@
       70% { box-shadow:0 0 0 12px rgba(37,211,102,0); }
       100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
     }
+
   </style>
 </head>
 
@@ -176,7 +180,7 @@
     </a>
 
     <div class="slider-novo">
-      <img id="slideImg" src="antes.jpg" alt="Terreno antes da roçagem em Ribas do Rio Pardo">
+      <img id="slideImg" src="antes.jpg" alt="Terreno antes da roçagem">
       <div class="slider-label" id="slideLabel">Antes</div>
     </div>
   </div>
@@ -189,29 +193,28 @@
   </div>
 </section>
 
-<section class="resultados-section">
+<section>
   <h2>Resultados</h2>
-  <div class="resultados">
 
   <div class="resultados">
-  <div class="slider">
+    <div class="slider">
 
-    <div class="par">
-      <img src="antes1.jpg" alt="Antes da roçagem 1">
-      <img src="depois1.jpg" alt="Depois da roçagem 1">
+      <div class="par">
+        <img src="antes1.jpg" alt="Antes da roçagem 1">
+        <img src="depois1.jpg" alt="Depois da roçagem 1">
+      </div>
+
+      <div class="par">
+        <img src="antes2.jpg" alt="Antes da roçagem 2">
+        <img src="depois2.jpg" alt="Depois da roçagem 2">
+      </div>
+
+      <div class="par">
+        <img src="antes.jpg" alt="Antes da roçagem">
+        <img src="depois.jpg" alt="Depois da roçagem">
+      </div>
+
     </div>
-
-    <div class="par">
-      <img src="antes2.jpg" alt="Antes da roçagem 2">
-      <img src="depois2.jpg" alt="Depois da roçagem 2">
-    </div>
-
-        <div class="par">
-      <img src="antes.jpg" alt="Antes da roçagem ">
-      <img src="depois.jpg" alt="Depois da roçagem ">
-        </div>
-    
-
   </div>
 
   <p style="font-size:13px; color:#666; max-width:500px; margin:10px auto;">
@@ -219,6 +222,7 @@
   </p>
 </section>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/5567981194737?text=Olá,%20vim%20pelo%20Google%20e%20quero%20orçamento" class="whatsapp">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
