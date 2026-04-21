@@ -8,161 +8,177 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+ /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    :root {
-      --primary: #2E7D32;
-      --background: #F5F7F4;
-      --white: #FFFFFF;
-      --text: #2B2B2B;
-      --cta: #FF9800;
-    }
+/* CORES */
+:root {
+  --primary: #1B5E20;
+  --background: #F4F6F3;
+  --white: #FFFFFF;
+  --text: #1F1F1F;
+  --cta: #FF9800;
+}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--background);
-      color: var(--text);
-    }
+/* BASE */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
+/* SEÇÕES */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
 
-    h2 {
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
+/* TITULOS */
+h1 {
+  font-size: 34px;
+  font-weight: 600;
+}
 
-    /* HERO */
-    .hero {
-      position: relative;
-      background: url('fundo.jpg') center/cover no-repeat;
-      padding: 80px 20px;
-    }
+h2 {
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 25px;
+}
 
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(245,247,244,0.88);
-    }
+/* HERO */
+.hero {
+  position: relative;
+  background: url('fundo.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(3px);
+}
 
-    .hero h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: auto;
+}
 
-    .hero p {
-      color: #555;
-      margin-bottom: 10px;
-    }
+.hero p {
+  color: #555;
+  margin: 10px 0 15px;
+}
 
-    .local {
-      display: block;
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
+.local {
+  display: block;
+  margin-bottom: 25px;
+  color: var(--primary);
+  font-weight: 500;
+}
 
-    .botao {
-      display: inline-block;
-      background: var(--cta);
-      color: #fff;
-      padding: 14px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
+/* BOTÃO PREMIUM */
+.botao {
+  display: inline-block;
+  background: linear-gradient(135deg, #FF9800, #FF6F00);
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(255,152,0,0.3);
+  transition: 0.3s;
+}
 
-    /* SLIDER */
-    .slider {
-      position: relative;
-      width: 300px;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 12px;
-    }
+.botao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255,152,0,0.4);
+}
 
-    .slider img {
-      width: 100%;
-      display: block;
-    }
+/* SLIDER PREMIUM */
+.slider {
+  position: relative;
+  width: 320px;
+  margin: 40px auto 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 
-    .before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      overflow: hidden;
-    }
+.slider img {
+  width: 100%;
+  display: block;
+}
 
-    .handle {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 3px;
-      height: 100%;
-      background: #fff;
-      cursor: ew-resize;
-    }
+.before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
 
-    /* CARDS */
-    .card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 500px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
+.handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #fff;
+}
 
-    /* RESULTADOS */
-    .resultados {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+/* CARDS PREMIUM */
+.card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
-    .resultados img {
-      width: 45%;
-      border-radius: 12px;
-    }
+/* RESULTADOS */
+.resultados {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
 
-    /* WHATSAPP */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
+.resultados img {
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
 
-    .whatsapp img {
-      width: 35px;
-      height: 35px;
-    }
+/* WHATSAPP PREMIUM */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
 
-    .whatsapp:hover {
-      transform: scale(1.1);
-      transition: 0.2s;
-    }
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp img {
+  width: 35px;
+}
   </style>
 </head>
 
