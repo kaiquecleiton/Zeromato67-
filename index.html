@@ -110,20 +110,30 @@
       margin:0 auto;
     }
 
-    .resultados-section {
-      padding-top:15px;
-    }
-
     .resultados {
-      display:flex;
-      gap:8px;
-      justify-content:center;
-      margin-top:8px;
-    }
+  overflow: hidden;
+}
 
-    .resultados img {
-      width:45%;
-      border-radius:8px;
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+}
+
+.par {
+  display: flex;
+  min-width: 100%;
+  scroll-snap-align: start;
+  gap: 10px;
+}
+
+.par img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
     }
 
     .whatsapp {
@@ -183,20 +193,24 @@
   <h2>Resultados</h2>
   <div class="resultados">
 
-  <div class="par">
-    <img src="antes1.jpg" alt="Terreno antes da roçagem 1">
-    <img src="depois1.jpg" alt="Terreno após roçagem 1">
-  </div>
+  <div class="resultados">
+  <div class="slider">
 
-  <div class="par">
-    <img src="antes2.jpg" alt="Terreno antes da roçagem 2">
-    <img src="depois2.jpg" alt="Terreno após roçagem 2">
-  </div>
+    <div class="par">
+      <img src="antes1.jpg" alt="Antes da roçagem 1">
+      <img src="depois1.jpg" alt="Depois da roçagem 1">
+    </div>
 
-  <div class="par">
-    <img src="antes.jpg" alt="Terreno antes da roçagem 3">
-    <img src="depois.jpg" alt="Terreno após roçagem 3">
-  </div>
+    <div class="par">
+      <img src="antes2.jpg" alt="Antes da roçagem 2">
+      <img src="depois2.jpg" alt="Depois da roçagem 2">
+    </div>
+
+        <div class="par">
+      <img src="antes.jpg" alt="Antes da roçagem ">
+      <img src="depois.jpg" alt="Depois da roçagem ">
+        </div>
+    
 
   </div>
 
