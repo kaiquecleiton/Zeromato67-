@@ -8,67 +8,80 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     :root {
-      --primary:#1B5E20;
-      --bg:#F4F6F3;
-      --text:#1F1F1F;
-      --cta:#FF9800;
+      --primary: #1B5E20;
+      --bg: #F4F6F3;
+      --text: #1F1F1F;
+      --cta: #FF9800;
     }
 
     body {
-      font-family:'Poppins',sans-serif;
-      background:var(--bg);
-      color:var(--text);
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     section {
-      padding:70px 20px;
-      text-align:center;
+      padding: 80px 20px;
+      text-align: center;
     }
-
-    h1 { font-size:34px; margin-bottom:10px; }
-    h2 { font-size:26px; color:var(--primary); margin-bottom:20px; }
 
     /* HERO */
     .hero {
       background: linear-gradient(180deg, #F4F6F3 0%, #FFFFFF 100%);
-      padding:100px 20px;
+      padding: 110px 20px;
     }
 
     .hero-content {
-      max-width:600px;
-      margin:auto;
+      max-width: 640px;
+      margin: auto;
+    }
+
+    /* TÍTULO AJUSTADO */
+    .hero h1 {
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
     }
 
     .hero p {
-      color:#555;
-      margin-bottom:15px;
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+      letter-spacing: 0.3px;
     }
 
     /* BOTÃO */
     .botao {
-      display:inline-block;
-      background:linear-gradient(135deg,#FF9800,#FF6F00);
-      color:#fff;
-      padding:16px 26px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:600;
-      box-shadow:0 10px 25px rgba(255,152,0,0.3);
-      transition:.3s;
+      display: inline-block;
+      background: linear-gradient(135deg, #FF9800, #FF6F00);
+      color: #fff;
+      padding: 16px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(255,152,0,0.3);
+      transition: 0.3s;
     }
 
     .botao:hover {
-      transform:translateY(-3px);
+      transform: translateY(-3px);
     }
 
-    /* SLIDER NOVO */
+    /* SLIDER */
     .slider-novo {
       position: relative;
       width: 320px;
-      margin: 40px auto;
+      margin: 50px auto 0;
     }
 
     .slider-novo img {
@@ -79,13 +92,13 @@
 
     .slider-label {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 12px;
+      left: 12px;
       background: rgba(0,0,0,0.6);
       color: #fff;
-      padding: 5px 10px;
+      padding: 6px 12px;
       border-radius: 6px;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .prev, .next {
@@ -95,64 +108,73 @@
       background: rgba(0,0,0,0.5);
       color: white;
       border: none;
-      width: 35px;
-      height: 35px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       cursor: pointer;
     }
 
-    .prev { left: -10px; }
-    .next { right: -10px; }
+    .prev { left: -12px; }
+    .next { right: -12px; }
+
+    /* TÍTULOS */
+    h2 {
+      font-size: 26px;
+      color: var(--primary);
+      margin-bottom: 25px;
+    }
 
     /* CARDS */
     .card {
-      background:#fff;
-      padding:25px;
-      border-radius:14px;
-      margin:20px auto;
-      max-width:500px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      background: #fff;
+      padding: 25px;
+      border-radius: 14px;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     /* RESULTADOS */
     .resultados {
-      display:flex;
-      gap:15px;
-      justify-content:center;
-      flex-wrap:wrap;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .resultados img {
-      width:45%;
-      border-radius:12px;
+      width: 45%;
+      border-radius: 12px;
     }
 
     /* WHATS */
     .whatsapp {
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      width:65px;
-      height:65px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .whatsapp img { width:35px; }
+    .whatsapp img {
+      width: 35px;
+    }
 
     /* ANIMAÇÃO */
     .fade {
-      opacity:0;
-      transform:translateY(20px);
-      transition:0.6s;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s;
     }
 
     .fade.show {
-      opacity:1;
-      transform:translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -162,8 +184,8 @@
 <!-- HERO -->
 <section class="hero fade">
   <div class="hero-content">
-    <h1>Cansado de mato alto no seu terreno?</h1>
-    <p>Limpeza rápida e profissional</p>
+    <h1>Seu terreno limpo, rápido e sem dor de cabeça</h1>
+    <p>Atendimento rápido em Ribas do Rio Pardo e região</p>
 
     <a href="https://wa.me/5567981194737?text=Quero%20orçamento" class="botao">
       SOLICITAR ORÇAMENTO
