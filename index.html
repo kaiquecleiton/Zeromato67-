@@ -142,21 +142,24 @@
 
     /* WHATSAPP */
     .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 30px;
-      text-decoration: none;
-    }
-  </style>
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* ISSO AQUI RESOLVE O TAMANHO */
+.whatsapp img {
+  width: 30px;
+  height: 30px;
+}
 </head>
 
 <body>
