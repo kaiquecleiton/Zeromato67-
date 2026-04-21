@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zero Mato</title>
 
-  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -42,7 +41,7 @@
     /* HERO */
     .hero {
       position: relative;
-      background: url('./img/fundo.jpg') center/cover no-repeat;
+      background: url('/img/fundo.jpg') center/cover no-repeat;
       padding: 80px 20px;
     }
 
@@ -58,7 +57,7 @@
     }
 
     .hero h1 {
-      font-size: 30px;
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
@@ -84,7 +83,7 @@
       margin-bottom: 30px;
     }
 
-    /* SLIDER ANTES/DEPOIS */
+    /* SLIDER */
     .slider {
       position: relative;
       width: 300px;
@@ -127,7 +126,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
-    /* IMAGENS RESULTADO */
+    /* RESULTADOS */
     .resultados {
       display: flex;
       gap: 10px;
@@ -142,24 +141,29 @@
 
     /* WHATSAPP */
     .whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
 
-/* ISSO AQUI RESOLVE O TAMANHO */
-.whatsapp img {
-  width: 30px;
-  height: 30px;
-}
+    .whatsapp img {
+      width: 30px !important;
+      height: 30px !important;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+      transition: 0.2s;
+    }
+  </style>
 </head>
 
 <body>
@@ -173,13 +177,15 @@
     <p>Limpeza rápida e profissional com roçadeira</p>
     <span class="local">📍 Ribas do Rio Pardo e região</span>
 
-    <a href="#" class="botao">SOLICITAR ORÇAMENTO</a>
+    <a href="https://wa.me/5567981194737" class="botao" target="_blank">
+      SOLICITAR ORÇAMENTO
+    </a>
 
     <!-- SLIDER -->
     <div class="slider" id="slider">
-      <img src="./img/depois.jpg">
+      <img src="/img/depois.jpg">
       <div class="before" id="before">
-        <img src="./img/antes.jpg">
+        <img src="/img/antes.jpg">
       </div>
       <div class="handle" id="handle"></div>
     </div>
@@ -201,8 +207,8 @@
 <section>
   <h2>Resultados</h2>
   <div class="resultados">
-    <img src="./img/antes.jpg">
-    <img src="./img/depois.jpg">
+    <img src="/img/antes.jpg">
+    <img src="/img/depois.jpg">
   </div>
 </section>
 
