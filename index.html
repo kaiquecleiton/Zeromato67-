@@ -8,181 +8,151 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
 
     :root {
-      --primary: #1B5E20;
-      --bg: #F4F6F3;
-      --text: #1F1F1F;
-      --cta: #FF9800;
+      --primary:#1B5E20;
+      --bg:#F4F6F3;
+      --text:#1F1F1F;
+      --cta:#FF9800;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--text);
     }
 
     section {
-      padding: 70px 20px;
-      text-align: center;
+      padding:70px 20px;
+      text-align:center;
     }
 
-    h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
+    h1 { font-size:34px; margin-bottom:10px; }
+    h2 { font-size:26px; color:var(--primary); margin-bottom:20px; }
 
-    h2 {
-      font-size: 26px;
-      color: var(--primary);
-      margin-bottom: 25px;
-    }
-
-    /* HERO LIMPO */
+    /* HERO */
     .hero {
       background: linear-gradient(180deg, #F4F6F3 0%, #FFFFFF 100%);
-      padding: 100px 20px;
+      padding:100px 20px;
     }
 
     .hero-content {
-      max-width: 600px;
-      margin: auto;
+      max-width:600px;
+      margin:auto;
     }
 
     .hero p {
-      color: #555;
-      margin-bottom: 15px;
+      color:#555;
+      margin-bottom:15px;
     }
 
-    /* BOTÃO PREMIUM */
+    /* BOTÃO */
     .botao {
-      display: inline-block;
-      background: linear-gradient(135deg, #FF9800, #FF6F00);
-      color: #fff;
-      padding: 16px 26px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 10px 25px rgba(255,152,0,0.3);
-      transition: 0.3s;
+      display:inline-block;
+      background:linear-gradient(135deg,#FF9800,#FF6F00);
+      color:#fff;
+      padding:16px 26px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 10px 25px rgba(255,152,0,0.3);
+      transition:.3s;
     }
 
     .botao:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(255,152,0,0.4);
+      transform:translateY(-3px);
     }
 
-    /* SLIDER */
-    .slider {
+    /* SLIDER NOVO */
+    .slider-novo {
       position: relative;
       width: 320px;
-      margin: 40px auto 0;
-      overflow: hidden;
-      border-radius: 14px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      margin: 40px auto;
     }
 
-    .slider img {
+    .slider-novo img {
       width: 100%;
-      display: block;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    .before {
+    .slider-label {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      overflow: hidden;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 14px;
     }
 
-    .handle {
+    .prev, .next {
       position: absolute;
-      top: 0;
-      left: 50%;
-      width: 4px;
-      height: 100%;
-      background: #fff;
-      cursor: ew-resize;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      cursor: pointer;
     }
+
+    .prev { left: -10px; }
+    .next { right: -10px; }
 
     /* CARDS */
     .card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 14px;
-      margin: 20px auto;
-      max-width: 500px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
+      background:#fff;
+      padding:25px;
+      border-radius:14px;
+      margin:20px auto;
+      max-width:500px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
     }
 
     /* RESULTADOS */
     .resultados {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
+      display:flex;
+      gap:15px;
+      justify-content:center;
+      flex-wrap:wrap;
     }
 
     .resultados img {
-      width: 45%;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width:45%;
+      border-radius:12px;
     }
 
-    /* PROVA SOCIAL */
-    .prova {
-      font-style: italic;
-      max-width: 500px;
-      margin: auto;
-      color: #555;
-    }
-
-    /* WHATSAPP */
+    /* WHATS */
     .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      transition: 0.3s;
-      z-index: 999;
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      width:65px;
+      height:65px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
 
-    .whatsapp:hover {
-      transform: scale(1.1);
-    }
-
-    .whatsapp img {
-      width: 35px;
-    }
+    .whatsapp img { width:35px; }
 
     /* ANIMAÇÃO */
     .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: 0.6s;
+      opacity:0;
+      transform:translateY(20px);
+      transition:0.6s;
     }
 
     .fade.show {
-      opacity: 1;
-      transform: translateY(0);
+      opacity:1;
+      transform:translateY(0);
     }
   </style>
 </head>
@@ -193,19 +163,19 @@
 <section class="hero fade">
   <div class="hero-content">
     <h1>Cansado de mato alto no seu terreno?</h1>
-    <p>Limpeza rápida, profissional e sem dor de cabeça</p>
+    <p>Limpeza rápida e profissional</p>
 
-    <a href="https://wa.me/5567981194737?text=Olá%20quero%20orçamento" class="botao" target="_blank">
+    <a href="https://wa.me/5567981194737?text=Quero%20orçamento" class="botao">
       SOLICITAR ORÇAMENTO
     </a>
 
     <!-- SLIDER -->
-    <div class="slider" id="slider">
-      <img src="depois.jpg">
-      <div class="before" id="before">
-        <img src="antes.jpg">
-      </div>
-      <div class="handle" id="handle"></div>
+    <div class="slider-novo">
+      <img id="slideImg" src="antes.jpg">
+      <div class="slider-label" id="slideLabel">Antes</div>
+
+      <button class="prev" onclick="trocarSlide(-1)">‹</button>
+      <button class="next" onclick="trocarSlide(1)">›</button>
     </div>
   </div>
 </section>
@@ -220,55 +190,43 @@
 
 <!-- RESULTADOS -->
 <section class="fade">
-  <h2>Resultados reais</h2>
+  <h2>Resultados</h2>
   <div class="resultados">
     <img src="antes.jpg">
     <img src="depois.jpg">
   </div>
 </section>
 
-<!-- PROVA SOCIAL -->
+<!-- PROVA -->
 <section class="fade">
   <h2>Clientes satisfeitos</h2>
-  <p class="prova">“Serviço rápido e muito bem feito. Recomendo!”</p>
+  <p>“Serviço rápido e bem feito. Recomendo!”</p>
 </section>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/5567981194737?text=Olá%20quero%20orçamento" class="whatsapp" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+<!-- WHATS -->
+<a href="https://wa.me/5567981194737?text=Quero%20orçamento" class="whatsapp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
 
 <script>
-/* SLIDER */
-const slider = document.getElementById('slider');
-const before = document.getElementById('before');
-const handle = document.getElementById('handle');
+const imagens = ["antes.jpg", "depois.jpg"];
+const textos = ["Antes", "Depois"];
+let index = 0;
 
-let dragging = false;
+function trocarSlide(dir){
+  index += dir;
+  if(index < 0) index = imagens.length - 1;
+  if(index >= imagens.length) index = 0;
 
-handle.addEventListener('mousedown', () => dragging = true);
-window.addEventListener('mouseup', () => dragging = false);
+  document.getElementById("slideImg").src = imagens[index];
+  document.getElementById("slideLabel").innerText = textos[index];
+}
 
-window.addEventListener('mousemove', (e) => {
-  if (!dragging) return;
-
-  const rect = slider.getBoundingClientRect();
-  let x = e.clientX - rect.left;
-
-  if (x < 0) x = 0;
-  if (x > rect.width) x = rect.width;
-
-  before.style.width = x + 'px';
-  handle.style.left = x + 'px';
-});
-
-/* ANIMAÇÃO */
+/* animação */
 const fades = document.querySelectorAll('.fade');
-
 window.addEventListener('scroll', () => {
   fades.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 50) {
+    if (el.getBoundingClientRect().top < window.innerHeight - 50) {
       el.classList.add('show');
     }
   });
